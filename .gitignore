@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output folders
+catboost_info/
+logs/
+metrics/
+models/
+optimized_hyperparameters/
+X_train_saver/
+
+# System files
+.DS_Store
+Thumbs.db
