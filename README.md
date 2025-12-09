@@ -208,6 +208,7 @@ It also provides a complete and structured pipeline for data preprocessing, mode
 ```
 After running the full ML pipeline with Optuna hyperparameters tuning(50 trials for each model), we obtained the following performance metrics on the test set.
 
+**Note**: The metrics may vary after each training session; the results below represent one such run.
 Model | RMSE | MAE | R<sup>2</sup>
 ------|------|-----|--------------
 LGBMRegressor | 1.3808315156649644 | 1.039682474444471 | 0.6130242041052543
