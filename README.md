@@ -200,6 +200,9 @@ It also provides a complete and structured pipeline for data preprocessing, mode
     --test_size 0.2 \
     --random_state 123
     ```
+4. Notes:
+    - Run `main.py` in the `src` folder before running `visualization.ipynb` in the `notebooks` folder
+    - The `model_path` variable in `visualization.ipynb` must be entered manually from the keyboard depending on your directory structure.
 ## Results
 ```bash
 - Test size: 0.36
