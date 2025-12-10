@@ -105,8 +105,16 @@ It also provides a complete and structured pipeline for data preprocessing, mode
 ## Project structure
 
     FinalTermProject_Python4DS/
+    ├── catboost_info
     ├── config
     ├── data
+    ├── logs
+    ├── metrics
+    ├── models
+    ├── notebooks/
+    │   ├── eda.ipynb
+    │   └── visualization.ipynb
+    ├── optimized_hyperparameters
     ├── src/
     │   ├── datapreprocessor/
     │   │   ├── __init__.py
@@ -130,9 +138,8 @@ It also provides a complete and structured pipeline for data preprocessing, mode
     │   │   ├── utils_style.py
     │   │   └── utils_validation.py
     │   └── main.py
-    ├── notebooks/
-    │   ├── eda.ipynb
-    │   └── visualization.ipynb
+    ├── X_train_saver
+    ├── FinalTermProject_Python4DS_Report.pdf
     ├── LICENSE
     ├── README.md
     └── requirements.txt
