@@ -15,8 +15,8 @@ env/
 # catboost_info/
 # logs/
 # metrics/
-models/*
-!models/BEST_OF_5_MODELS_LGBMRegressor_20251208_2135.joblib
+# models/*
+# !models/BEST_OF_5_MODELS_LGBMRegressor_20251208_2135.joblib
 # optimized_hyperparameters/
 # X_train_saver/
 
