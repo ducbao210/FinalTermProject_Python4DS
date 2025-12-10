@@ -145,7 +145,8 @@ It also provides a complete and structured pipeline for data preprocessing, mode
 
 ## Installation
 
-1. **Clone the repository.**
+1. **Clone the repository:**
+Git can take a considerable amount of time because the RandomForestRegressor model is large
     ```bash
     git clone https://github.com/ducbao210/FinalTermProject_Python4DS.git
     cd FinalTermProject_Python4DS
