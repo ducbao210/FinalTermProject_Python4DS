@@ -12,12 +12,13 @@ env/
 .ipynb_checkpoints/
 
 # Output folders
-catboost_info/
-logs/
-metrics/
-models/
-optimized_hyperparameters/
-X_train_saver/
+# catboost_info/
+# logs/
+# metrics/
+models/*
+!models/BEST_OF_5_MODELS_LGBMRegressor_20251208_2135.joblib
+# optimized_hyperparameters/
+# X_train_saver/
 
 # System files
 .DS_Store

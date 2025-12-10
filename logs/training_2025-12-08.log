@@ -1,0 +1,100 @@
+2025-12-08 21:35:01 - MainProcess - INFO - Updating configuration from arguments...
+2025-12-08 21:35:01 - MainProcess - INFO - --- CONFIGURATION ---
+2025-12-08 21:35:01 - MainProcess - INFO - Data Path: data/vietnam_housing_dataset.csv
+2025-12-08 21:35:01 - MainProcess - INFO - Test Size: 0.36
+2025-12-08 21:35:01 - MainProcess - INFO - Random State: 8386
+2025-12-08 21:35:01 - MainProcess - INFO - Trials for Optuna: 50
+2025-12-08 21:35:01 - MainProcess - INFO - ----------------------
+2025-12-08 21:35:01 - MainProcess - INFO - Reading data file...
+2025-12-08 21:35:01 - MainProcess - INFO - Performing raw data preprocessing...
+2025-12-08 21:35:01 - MainProcess - INFO - Actual columns after name cleaning and detecting outliers: ['address', 'area', 'frontage', 'access_road', 'house_direction', 'balcony_direction', 'floors', 'bedrooms', 'bathrooms', 'legal_status', 'furniture_state', 'price']
+2025-12-08 21:35:01 - MainProcess - INFO - Splitting column 'address'...
+2025-12-08 21:35:01 - MainProcess - INFO - Creating new columns 'new_address' contains 'District City'...
+2025-12-08 21:35:01 - MainProcess - INFO - Creating new columns 'condo_complex' contains 'Dự án'
+2025-12-08 21:35:02 - MainProcess - INFO - Saving cleaned data to data/cleaned_dataset.csv
+2025-12-08 21:35:02 - MainProcess - INFO - Filtering dataset to selected features only...
+2025-12-08 21:35:02 - MainProcess - INFO - Filtered data shape: (30229, 10)
+2025-12-08 21:35:02 - MainProcess - INFO - Columns used: ['condo_complex', 'area', 'price', 'legal_status', 'bathrooms', 'furniture_state', 'bedrooms', 'new_address', 'frontage', 'floors']
+2025-12-08 21:35:02 - MainProcess - INFO - Splitting data...
+2025-12-08 21:35:02 - DataHandler - INFO - Loading data... Original shape: (30229, 10)
+2025-12-08 21:35:02 - DataHandler - INFO - Data split completed. Train size: 19346, Test size: 10883
+2025-12-08 21:35:02 - MainProcess - INFO - No specific model selected. Running comparison for: ['RandomForestRegressor', 'XGBRegressor', 'LGBMRegressor', 'ElasticNet', 'CatBoostRegressor']
+2025-12-08 21:35:02 - MainProcess - INFO - ========================================
+2025-12-08 21:35:02 - MainProcess - INFO - Start processing: RandomForestRegressor
+2025-12-08 21:35:02 - MainProcess - INFO - ========================================
+2025-12-08 21:35:02 - ModelTrainer - INFO - --- Starting Optimization for RandomForestRegressor ---
+2025-12-08 21:37:32 - ModelTrainer - INFO - Optimization Finished. Best params for RandomForestRegressor: {'n_estimators': 487, 'max_depth': 20, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt'}
+2025-12-08 21:37:37 - ModelTrainer - INFO - Retraining completed for RandomForestRegressor
+2025-12-08 21:37:37 - MainProcess - INFO - Evaluating best model...
+2025-12-08 21:37:37 - Evaluator - INFO - --- Evaluation Results for RandomForestRegressor ---
+2025-12-08 21:37:37 - Evaluator - INFO - RMSE: 1.4728
+2025-12-08 21:37:37 - Evaluator - INFO - MAE : 1.1289
+2025-12-08 21:37:37 - Evaluator - INFO - R2  : 0.5598
+2025-12-08 21:37:37 - ModelTrainer - INFO - Saved best parameters for RandomForestRegressor to e:\Google_download\PROJECT/optimized_hyperparameters/RandomForestRegressor.json
+2025-12-08 21:37:38 - ModelTrainer - INFO - Saved X_train successfully to e:\Google_download\PROJECT/X_train_saver/RandomForestRegressor.csv
+2025-12-08 21:37:38 - ModelTrainer - INFO - Saved RandomForestRegressor successfully to e:\Google_download\PROJECT/models/RandomForestRegressor_20251208_2135.joblib
+2025-12-08 21:37:38 - MainProcess - INFO - ========================================
+2025-12-08 21:37:38 - MainProcess - INFO - Start processing: XGBRegressor
+2025-12-08 21:37:38 - MainProcess - INFO - ========================================
+2025-12-08 21:37:38 - ModelTrainer - INFO - --- Starting Optimization for XGBRegressor ---
+2025-12-08 21:41:43 - ModelTrainer - INFO - Optimization Finished. Best params for XGBRegressor: {'n_estimators': 332, 'learning_rate': 0.05307318483535124, 'max_depth': 9, 'subsample': 0.9948155263236692, 'colsample_bytree': 0.7253438655099059, 'reg_alpha': 0.7221945064115256, 'reg_lambda': 8.426436987303791}
+2025-12-08 21:41:44 - ModelTrainer - INFO - Retraining completed for XGBRegressor
+2025-12-08 21:41:44 - MainProcess - INFO - Evaluating best model...
+2025-12-08 21:41:44 - Evaluator - INFO - --- Evaluation Results for XGBRegressor ---
+2025-12-08 21:41:44 - Evaluator - INFO - RMSE: 1.3870
+2025-12-08 21:41:44 - Evaluator - INFO - MAE : 1.0411
+2025-12-08 21:41:44 - Evaluator - INFO - R2  : 0.6095
+2025-12-08 21:41:44 - ModelTrainer - INFO - Saved best parameters for XGBRegressor to e:\Google_download\PROJECT/optimized_hyperparameters/XGBRegressor.json
+2025-12-08 21:41:44 - ModelTrainer - INFO - Saved X_train successfully to e:\Google_download\PROJECT/X_train_saver/XGBRegressor.csv
+2025-12-08 21:41:44 - ModelTrainer - INFO - Saved XGBRegressor successfully to e:\Google_download\PROJECT/models/XGBRegressor_20251208_2135.joblib
+2025-12-08 21:41:44 - MainProcess - INFO - ========================================
+2025-12-08 21:41:44 - MainProcess - INFO - Start processing: LGBMRegressor
+2025-12-08 21:41:44 - MainProcess - INFO - ========================================
+2025-12-08 21:41:44 - ModelTrainer - INFO - --- Starting Optimization for LGBMRegressor ---
+2025-12-08 21:43:30 - ModelTrainer - INFO - Optimization Finished. Best params for LGBMRegressor: {'n_estimators': 365, 'learning_rate': 0.09211187667131882, 'num_leaves': 47, 'max_depth': 7, 'subsample': 0.7055292798700032, 'colsample_bytree': 0.9391980852268857, 'min_child_samples': 11}
+2025-12-08 21:43:30 - ModelTrainer - INFO - Retraining completed for LGBMRegressor
+2025-12-08 21:43:30 - MainProcess - INFO - Evaluating best model...
+2025-12-08 21:43:31 - Evaluator - INFO - --- Evaluation Results for LGBMRegressor ---
+2025-12-08 21:43:31 - Evaluator - INFO - RMSE: 1.3808
+2025-12-08 21:43:31 - Evaluator - INFO - MAE : 1.0397
+2025-12-08 21:43:31 - Evaluator - INFO - R2  : 0.6130
+2025-12-08 21:43:31 - ModelTrainer - INFO - Saved best parameters for LGBMRegressor to e:\Google_download\PROJECT/optimized_hyperparameters/LGBMRegressor.json
+2025-12-08 21:43:31 - ModelTrainer - INFO - Saved X_train successfully to e:\Google_download\PROJECT/X_train_saver/LGBMRegressor.csv
+2025-12-08 21:43:31 - ModelTrainer - INFO - Saved LGBMRegressor successfully to e:\Google_download\PROJECT/models/LGBMRegressor_20251208_2135.joblib
+2025-12-08 21:43:31 - MainProcess - INFO - ========================================
+2025-12-08 21:43:31 - MainProcess - INFO - Start processing: ElasticNet
+2025-12-08 21:43:31 - MainProcess - INFO - ========================================
+2025-12-08 21:43:31 - ModelTrainer - INFO - --- Starting Optimization for ElasticNet ---
+2025-12-08 21:43:54 - ModelTrainer - INFO - Optimization Finished. Best params for ElasticNet: {'alpha': 0.01670261008264691, 'l1_ratio': 0.03583147696144118}
+2025-12-08 21:43:54 - ModelTrainer - INFO - Retraining completed for ElasticNet
+2025-12-08 21:43:54 - MainProcess - INFO - Evaluating best model...
+2025-12-08 21:43:54 - Evaluator - INFO - --- Evaluation Results for ElasticNet ---
+2025-12-08 21:43:54 - Evaluator - INFO - RMSE: 1.7051
+2025-12-08 21:43:54 - Evaluator - INFO - MAE : 1.3498
+2025-12-08 21:43:54 - Evaluator - INFO - R2  : 0.4099
+2025-12-08 21:43:54 - ModelTrainer - INFO - Saved best parameters for ElasticNet to e:\Google_download\PROJECT/optimized_hyperparameters/ElasticNet.json
+2025-12-08 21:43:54 - ModelTrainer - INFO - Saved X_train successfully to e:\Google_download\PROJECT/X_train_saver/ElasticNet.csv
+2025-12-08 21:43:54 - ModelTrainer - INFO - Saved ElasticNet successfully to e:\Google_download\PROJECT/models/ElasticNet_20251208_2135.joblib
+2025-12-08 21:43:54 - MainProcess - INFO - ========================================
+2025-12-08 21:43:54 - MainProcess - INFO - Start processing: CatBoostRegressor
+2025-12-08 21:43:54 - MainProcess - INFO - ========================================
+2025-12-08 21:43:54 - ModelTrainer - INFO - --- Starting Optimization for CatBoostRegressor ---
+2025-12-08 22:01:48 - ModelTrainer - INFO - Optimization Finished. Best params for CatBoostRegressor: {'iterations': 1445, 'learning_rate': 0.17130004256858014, 'depth': 5, 'l2_leaf_reg': 3.3978488049305433, 'border_count': 129}
+2025-12-08 22:01:51 - ModelTrainer - INFO - Retraining completed for CatBoostRegressor
+2025-12-08 22:01:51 - MainProcess - INFO - Evaluating best model...
+2025-12-08 22:01:51 - Evaluator - INFO - --- Evaluation Results for CatBoostRegressor ---
+2025-12-08 22:01:51 - Evaluator - INFO - RMSE: 1.3843
+2025-12-08 22:01:51 - Evaluator - INFO - MAE : 1.0456
+2025-12-08 22:01:51 - Evaluator - INFO - R2  : 0.6111
+2025-12-08 22:01:51 - ModelTrainer - INFO - Saved best parameters for CatBoostRegressor to e:\Google_download\PROJECT/optimized_hyperparameters/CatBoostRegressor.json
+2025-12-08 22:01:51 - ModelTrainer - INFO - Saved X_train successfully to e:\Google_download\PROJECT/X_train_saver/CatBoostRegressor.csv
+2025-12-08 22:01:51 - ModelTrainer - INFO - Saved CatBoostRegressor successfully to e:\Google_download\PROJECT/models/CatBoostRegressor_20251208_2135.joblib
+2025-12-08 22:01:51 - Evaluator - INFO - Saved all evaluation metrics to e:\Google_download\PROJECT/metrics/all_models.json
+2025-12-08 22:01:51 - MainProcess - INFO - ========================================
+2025-12-08 22:01:51 - MainProcess - INFO - SELECTING BEST MODEL
+2025-12-08 22:01:51 - MainProcess - INFO - ========================================
+2025-12-08 22:01:51 - Evaluator - INFO - Selected Best Model based on R2: LGBMRegressor (Score = 0.6130)
+2025-12-08 22:01:51 - ModelTrainer - INFO - Saved LGBMRegressor successfully to e:\Google_download\PROJECT\models/BEST_OF_5_MODELS_LGBMRegressor_20251208_2135.joblib
+2025-12-08 22:01:51 - MainProcess - INFO - Saved WINNER model to: e:\Google_download\PROJECT\models/BEST_OF_5_MODELS_LGBMRegressor_20251208_2135.joblib
+2025-12-08 22:01:51 - MainProcess - INFO - Pipeline Completed successfully.
+2025-12-08 22:01:51 - MainProcess - INFO - ================================

@@ -145,11 +145,17 @@ It also provides a complete and structured pipeline for data preprocessing, mode
     cd FinalTermProject_Python4DS
     ```
 2. Create a virtual environment (recommended).
+    - Using cmd-Windows / macOS terminal
     ```bash
     python -m venv venv 
     ```
+    - Using Windows powershell
+    ```bash
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    python -m venv venv
+    ```
     - Activate environment
-        - Windows
+        - Windows - using cmd
         ```bash
         venv\Scripts\activate 
         ```
@@ -201,8 +207,8 @@ It also provides a complete and structured pipeline for data preprocessing, mode
     --random_state 123
     ```
 4. Notes:
-    - Run `main.py` in the `src` folder before running `visualization.ipynb` in the `notebooks` folder
-    - The `model_path` variable in `visualization.ipynb` must be entered manually from the keyboard depending on your directory structure.
+    - Run `main.py` with all 5 models (recommmended because model still exist but X_train_saver will be deleted after each section)in the `src` folder before running `visualization.ipynb` in the `notebooks` folder so as to ensure the most objective results.
+
 ## Results
 ```bash
 - Test size: 0.36
@@ -219,5 +225,7 @@ XGBRegressor | 1.3870344665186412 | 1.0411404421398944 | 0.6095396611780065
 RandomForestRegressor | 1.472791108940537 | 1.1289327350162746 | 0.5597648368979269
 ElasticNet | 1.7051339806047927 | 1.3498374039372176 | 0.40990839068308094
 CatBoost | 1.3843300639709741 | 1.0455688110540604 | 0.6110607949600845
+
+Using `R²` as the evaluation criterion, the `LGBMRegressor` emerges as the most efficient model, with `~ 0.613`.
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
