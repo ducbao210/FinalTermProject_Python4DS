@@ -105,24 +105,24 @@ It also provides a complete and structured pipeline for data preprocessing, mode
 ## Project structure
 
     FinalTermProject_Python4DS/
-    ├── catboost_info
-    ├── config
-    ├── data
-    ├── logs
-    ├── metrics
-    ├── models
-    ├── notebooks/
-    │   ├── eda.ipynb
-    │   └── visualization.ipynb
-    ├── optimized_hyperparameters
+    ├── catboost_info/                  # Information related to catboost training and optimize hyparameters
+    ├── config/                         # Default configuration for dataset, model and system
+    ├── data/                           # Store raw and cleaned dataset
+    ├── log/                            # Store preprocessing, training and optimizing information
+    ├── metrics/                        # Store metrics for all models
+    ├── models/                         # Store model files and the optimal model file formatting .joblib
+    ├── notebooks/                      
+    │   ├── eda.ipynb                   # Exploratory Data Analysis
+    │   └── visualization.ipynb         # Features Important Analysis using SHAP values
+    ├── optimized_hyperparemeters/      # Store the optimal hyperparameters for each model
     ├── src/
-    │   ├── datapreprocessor/
+    │   ├── datapreprocessor/           # Package for preprocessing
     │   │   ├── __init__.py
     │   │   ├── data_preprocessing.py
     │   │   ├── encoder.py
     │   │   ├── imputer.py
     │   │   └── scaler.py
-    │   ├── modeltrainer/
+    │   ├── modeltrainer/               # Package for model training
     │   │   ├── __init__.py
     │   │   ├── config.py
     │   │   ├── data_handler.py
@@ -131,15 +131,14 @@ It also provides a complete and structured pipeline for data preprocessing, mode
     │   │   ├── logger.py
     │   │   ├── model_trainer.py
     │   │   └── pipeline_factory.py 
-    │   ├── visualizer/
+    │   ├── visualizer/                 # Package for visualizing
     │   │   ├── __init__.py
     │   │   ├── plots.py
     │   │   ├── utils_layout.py
     │   │   ├── utils_style.py
     │   │   └── utils_validation.py
-    │   └── main.py
-    ├── X_train_saver
-    ├── FinalTermProject_Python4DS_Report.pdf
+    │   └── main.py                     # Implement pipeline workflow
+    ├── X_train_saver                   # Save for later SHAP analysis in visualization notebook
     ├── LICENSE
     ├── README.md
     └── requirements.txt
